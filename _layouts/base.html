@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ site.title }} - {{ page.title | escape }}</title>
+    {% if jekyll.environment == 'stage' %}
+    <meta name="robots" content="noindex"/>
+    {% endif %}
+</head>
+
+
+</html>

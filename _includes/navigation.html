@@ -1,0 +1,27 @@
+<nav role="navigation">
+    <div class="nav-menu-container">
+        <header class="menu-item logo-container", role="banner">
+            <h1 id="logo">
+                <a href="/" title="Pelagornis StyleGuide" role="img" aria-label="StyleGuide">
+                    Pelagornis StyleGuide
+                </a>
+            </h1>    
+        </header>
+        <div id="menu-toggle" class="menu-item menu-toggle">
+            <span class="line-1"></span>
+            <span class="line-2"></span>
+        </div> 
+    </div>
+    <div class="list-items">
+        {% for nav in site.data.navigation %}
+        <h2>{{ nav.header }}</h2>
+        <ul>
+            {% for navpage in nav.pages %}
+            <li>
+                <a href="{{ navpage.url }}">{{ navpage.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </div>
+</nav>

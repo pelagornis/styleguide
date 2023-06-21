@@ -1,0 +1,33 @@
+@media only screen and(max-width: 767px) {
+    nav[role="navigation"] {
+        width: 100%;
+        position: relative;
+        padding: 20px 30px;
+
+        & .list-items {
+            padding-top: 20px;
+            display: none;
+        }
+    }
+
+    #logo {
+        margin: 0;
+        padding: 0;
+
+        a {
+            margin: 0 auto;
+        }
+    }
+
+    main {
+        max-width: 100%;
+        min-width: 320px;
+        margin-left: 0;
+        padding: 30px 30px 0;
+    }
+
+    footer[role="contentinfo"] {
+        margin-left: 0;
+        flex-direction: column;
+    }
+}

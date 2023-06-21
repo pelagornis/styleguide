@@ -1,0 +1,9 @@
+:root {
+    --border-radius: 4px;
+    --content-margin-bottom: 1em;
+}
+
+@mixin vars-light() {
+    --logo-reference: url('/assets/images/pelagornis.svg');
+    --menu-icon: url('/assets/images/icon-pelagornis.svg');
+}

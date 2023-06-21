@@ -1,0 +1,28 @@
+<head>
+    <meta charset="utf-8">
+    <title>{{ site.title }} - {{ page.title | escape }}</title>
+    {% if jekyll.environment == 'stage' %}
+    <meta name="robots" content="noindex"/>
+    {% endif %}
+    <meta name="author" content="Pelagornis"/>
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    {% if page.excerpt %}
+    <meta name="description" content="{{ page.excerpt | strip_html | escape }}">
+    {% endif %}
+    <link rel="license" href="/LICENSE"/>
+    <link rel="stylesheet" media="all" href="/assets/stylesheets/application.scss" />
+    <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" type="image/vnd.microsoft.icon" href="/favicon.ico" />
+    <link rel="mask-icon" href="/assets/images/icon-pelagornis.svg" color="#FFFFFF" />
+    {% if page.id %}
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:description" content="{{ page.excerpt | strip_html | escape }}" />
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
+    <meta property="article:modified_time" content="{{ site.time | date_to_xmlschema }}" />
+    {% else %}
+    <meta property="og:title" content="{{ site.title }}" />
+    <meta property="og:url" content="{{ site.url }}" />
+    <meta property="og:description" content="{{ site.description | strip_html | escape}}" />
+    {% endif %}
+</head>

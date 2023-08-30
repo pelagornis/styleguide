@@ -1,14 +1,14 @@
 - header: Style Guide
   pages:
-  # - title: HTML/CSS Style Guide
-  #   url: /htmlcssguide/
-  # - title: JavaScript Style Guide
-  #   url: /javascriptguide/
-  # - title: Kotlin Style Guide
-  #   url: /kotlinguide/
-  # - title: Shell Style Guide
-  #   url: /shellguide/
-  # - title: Swift Style Guide
-  #   url: /swiftguide/
-  # - title: TypeScript Style Guide
-  #   url: /typescriptguide/
+  - title: HTML/CSS Style Guide
+    url: /htmlcssguide/
+  - title: JavaScript Style Guide
+    url: /javascriptguide/
+  - title: Kotlin Style Guide
+    url: /kotlinguide/
+  - title: Shell Style Guide
+    url: /shellguide/
+  - title: Swift Style Guide
+    url: /swiftguide/
+  - title: TypeScript Style Guide
+    url: /typescriptguide/

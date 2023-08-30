@@ -86,7 +86,7 @@ p {
         display: block;
         width: 170px;
         height: 35px;
-        background-image: url('/assets/images/pelagornis.svg');
+        background-image: url('{{ "/assets/images/pelagornis.svg" | relative_url }}');
         background-repeat: no-repeat;
         background-size: 170px 35px;
         background-position-x: -8px;

@@ -1,6 +1,6 @@
 # Pelagornis Style Guides
 
-![Team](https://img.shields.io/badge/project-team-green.svg?colorA=303033&colorB=ff8a2c&label=Pelagornis)
+![Assemble](https://img.shields.io/badge/project-assemble-green.svg?colorA=303033&colorB=F2F562&label=Pelagornis)
 
 Every open source project has its own style guide.
 It is a set of rules and about how to write the code for the project.

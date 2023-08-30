@@ -154,12 +154,45 @@ main {
 }
 
 footer[role="contentinfo"] {
-    padding: 20px 30px;
     margin-left: 256px;
-    min-height: 64px;
     background-color: #F4F4F4;
+    
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 1em 0.2em;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 61rem;
+    }
 
     p {
+        font-size: 0.75em;
+        margin: auto 0.6rem;
+        padding: 0.4rem 0;
+        width: 100%;
+    }
 
+    aside {
+        display: inline-flex;
+        gap: 0.2rem;
+        margin: 0 0.4rem;
+        padding: 0.2rem 0 0.6rem;
+        i {
+            &.github {
+                background-image: url(/assets/images/github_icon/github.svg);
+            }
+
+            &.feed {
+                background-image: url(/assets/images/rss_icon/rss.svg);
+            }
+            width: 16px;
+            height: 16px;
+            background-repeat: no-repeat;
+            background-size: 16px;
+            display: block;
+            margin-left: 1em;
+        }
     }
 }

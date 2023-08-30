@@ -153,6 +153,15 @@ main {
     height: 100%;
 }
 
+.breadcrumbs__item:not(:last-child)::after {
+    background: url(/assets/images/breadcrumbs.svg);
+    content: " ";
+    display: inline-block;
+    height: 10px;
+    width: 7px;
+    opacity: .5;
+}
+
 footer[role="contentinfo"] {
     margin-left: 256px;
     background-color: #F4F4F4;

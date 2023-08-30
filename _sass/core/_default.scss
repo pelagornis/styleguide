@@ -9,7 +9,65 @@ body {
     padding: 0;   
 }
 
-ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, hgroup, p, blockquote, figure,
+h1 {
+    margin: 0.65em 0;
+}
+
+h2 {
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h3 {
+    display: block;
+    font-size: 1.25em;
+    margin-block-start: 1.45em;
+    margin-block-end: 1.45em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h4 {
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h5 {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h6 {
+    display: block;
+    margin-block-start: 0.75em;
+    margin-block-end: 0.75em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+p {
+    display: block;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+ul, ol, li, dl, dt, dd, hgroup, blockquote, figure,
 form, fieldset, input, legend, pre, abbr {
     margin: 0;
     padding: 0
@@ -21,6 +79,8 @@ main li {
 
 pre, code, address, caption, th, figcaption {
     font-size: 1em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
     font-weight: normal;
     font-style: normal
 }

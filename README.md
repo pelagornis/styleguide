@@ -11,12 +11,12 @@ This project([pelagornis/styleguide](https://github.com/pelagornis/styleguide)) 
 StyleGuide uses [Jekyll](https://jekyllrb.com), static site generator in Ruby.
 
 ## Guides
-- [HTML/CSS Style Guide]() (progress)
-- [JavaScript Style Guide]() (progress)
-- [Kotlin Style Guide]() (progress)
-- [Shell Style Guide]() (progress)
-- [Swift Style Guide]() (progress)
-- [TypeScript Style Guide]() (progress)
+- [HTML/CSS Style Guide](https://pelagornis.github.io/styleguide/htmlcssguide/) (progress)
+- [JavaScript Style Guide](https://pelagornis.github.io/styleguide/javascriptguide/) (progress)
+- [Kotlin Style Guide](https://pelagornis.github.io/styleguide/kotlinguide/) (progress)
+- [Shell Style Guide](https://pelagornis.github.io/styleguide/shellguide/) (progress)
+- [Swift Style Guide](https://pelagornis.github.io/styleguide/swiftguide/) (progress)
+- [TypeScript Style Guide](https://pelagornis.github.io/styleguide/typescriptguide/) (progress)
 
 
 ## Contributors

@@ -10,9 +10,9 @@
     <meta name="description" content="{{ page.excerpt | strip_html | escape }}">
     {% endif %}
     <link rel="license" href="/LICENSE"/>
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" />
-    <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" type="image/vnd.microsoft.icon" href="/favicon.ico" />
-    <link rel="mask-icon" href="/assets/images/icon-pelagornis.svg" color="#FFFFFF" />
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+    <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" type="image/vnd.microsoft.icon" href="{{ '/favicon.ico' | relative_url }}" />
+    <link rel="mask-icon" href="{{ '/assets/images/icon-pelagornis.svg' | relative_url }}" color="#FFFFFF" />
     {% if page.id %}
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{{ page.title }}" />

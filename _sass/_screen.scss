@@ -174,7 +174,7 @@ footer[role="contentinfo"] {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding: 1em 0.2em;
+        padding: 1em;
         margin-left: auto;
         margin-right: auto;
     }
@@ -188,7 +188,7 @@ footer[role="contentinfo"] {
 
     aside {
         display: inline-flex;
-        gap: 1rem;
+        gap: 1.25em;
         margin: 0 0.4rem;
         padding: 0.2rem 0 0.6rem;
         i {

@@ -1,0 +1,49 @@
+name: Bug Report
+description: Create a report to help us improve
+title: "Insert title here"
+labels: ["type:bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the bug and the expected behavior
+      placeholder: A clear and concise description of what the bug is, and what you expect to happen instead.
+    validations:
+      required: true
+  - type: textarea
+    id: error-log
+    attributes:
+      label: Error log
+      description: The full error message
+      placeholder: The full error message
+    validations:
+      required: true
+  - type: textarea
+    id: desktop
+    attributes:
+      label: Desktop
+      description: Which Desktop are you using?
+      placeholder: |
+        - OS: [e.g. window, macos]
+        - Browser: [e.g. chrome, safari]
+        - Version: [e.g. 11]
+    validations:
+      required: true
+
+  - type: textarea
+    id: smartphone
+    attributes:
+      label: Smart Phone
+      description: Which smart phone are you using?
+      placeholder: |
+        - Devices: [e.g. iPhone14]
+        - OS: [e.g. iOS 17.0]
+        - Browser: [e.g. chrome, safari]
+        - Version: [e.g. 11]
+    validations:
+      required: true

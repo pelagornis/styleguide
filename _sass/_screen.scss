@@ -1,4 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+@font-face {
+    font-family: "Open Sans";
+    src: url(/assets/fonts/OpenSans-Light) format('ttf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(/assets/fonts/OpenSans-Regular) format('ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(/assets/fonts/OpenSans-Medium) format('ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(/assets/fonts/OpenSans-SemiBold) format('ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(/assets/fonts/OpenSans-Bold) format('ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(/assets/fonts/OpenSans-ExtraBold) format('ttf');
+    font-weight: 800;
+}
 
 *, *:before, *:after {
     -moz-box-sizing: border-box;

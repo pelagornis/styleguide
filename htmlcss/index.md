@@ -6,12 +6,10 @@ title: Html/Css Style Guide
 ## Table of Contents
 
 - Basic
-
   - Basic Style Rules
   - Basic Formatting Rules
 
 - HTML
-
   - HTML Style Rules
   - HTML Formatting Rules
 
@@ -57,3 +55,36 @@ Don’t use tabs or mix tabs and spaces for indentation.
   color: white;
 }
 ```
+
+#### Capitalization
+
+Use only lowercase.
+
+```html
+// Wrong
+<A HREF="/">Home</A>
+
+// Right
+<a href="/">Home</a>
+```
+
+```css
+// Wrong
+color: #F5F5F7;
+
+// Right
+color: #f5f5f7;
+```
+
+#### Trailing Whitespace
+
+Remove trailing white spaces.
+
+```html
+// Wrong
+<p>Hello, World_
+
+/// Right
+<p>Hello, World
+```
+

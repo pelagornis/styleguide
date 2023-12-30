@@ -134,3 +134,28 @@ for dir in "${create_file[@]}"; do
   fi
 done
 ```
+
+#### Case statement
+
+Indent alternatives by 2 spaces. 
+
+A one-line alternative needs a space after the close parenthesis of the pattern and before the ;;.
+
+Long or multi-command alternatives should be split over multiple lines with the pattern, actions, and ;; on separate lines.
+
+
+```bash
+case "${expression}" in
+  a)
+    variable="…"
+    some_command "${variable}" "${other_expr}" …
+    ;;
+  absolute)
+    actions="relative"
+    another_command "${actions}" "${other_expr}" …
+    ;;
+  *)
+    error "Unexpected expression '${expression}'"
+    ;;
+esac
+```

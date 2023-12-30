@@ -80,6 +80,23 @@ function create_file() {
 }
 ```
 
+### Shell Style Formatting 
+
+#### Indentation
+
+Indent 2 spaces. No tabs.
+
+```bash
+while read -r f; do
+  echo "file=${f}"
+done < <(find /tmp)
+```
+
+#### Line Length and Long Strings
+
+Maximum line length is 80 characters.
+
+
 #### Meaningful Variable Names
 
 Use uppercase letters for variable names and prefer underscores `_` for readability.
@@ -89,4 +106,31 @@ OUTPUT_DIR="/path/to/output"
 FILE_NAME="example.txt"
 ```
 
-### Shell Style Formatting 
+#### Pipelines
+
+If the pipeline doesn't fit all one line, you'll need to split one line per line.
+
+If the pipelines all fit in one line, they should be in one line.
+
+```bash
+# All fits on one line
+command1 | command2
+
+# Long commands
+command1 \
+  | command2 \
+  | command3 \
+  | command4
+```
+
+#### Loop
+
+Put `; do` and `; then` on the same line as the while, for or if.
+
+```bash
+for dir in "${create_file[@]}"; do
+  if [[ -d "${dir}/${FileName}" ]]; then
+    ...
+  fi
+done
+```

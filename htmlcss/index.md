@@ -1,15 +1,17 @@
 ---
 layout: page
-title: Html/Css Style Guide
+title: Html/CSS Style Guide
 ---
 
 ## Table of Contents
 
 - [Basic](#basic)
+
   - [Basic Style Rules](#basic-style-rules)
   - [Basic Formatting Rules](#basic-formatting-rules)
 
 - [HTML](#html)
+
   - [HTML Style Rules](#html-style-rules)
   - [HTML Formatting Rules](#html-formatting-rules)
 
@@ -62,7 +64,7 @@ Use only lowercase.
 
 ```html
 // Wrong
-<A HREF="/">Home</A>
+<a href="/">Home</a>
 
 // Right
 <a href="/">Home</a>
@@ -70,7 +72,7 @@ Use only lowercase.
 
 ```css
 // Wrong
-color: #F5F5F7;
+color: #f5f5f7;
 
 // Right
 color: #f5f5f7;
@@ -82,10 +84,9 @@ Remove trailing white spaces.
 
 ```html
 // Wrong
-<p>Hello, World_
+<p>Hello, World_ /// Right</p>
 
-/// Right
-<p>Hello, World
+<p>Hello, World</p>
 ```
 
 ## HTML
@@ -111,8 +112,8 @@ we strongly recommend closing all HTML elements.
 ```html
 // Wrong
 <section>
-  <p>Hello, Pelagornis.
-  <p>Pelagornis StyleGuide.
+  <p>Hello, Pelagornis.</p>
+  <p>Pelagornis StyleGuide.</p>
 </section>
 
 // Right
@@ -130,7 +131,7 @@ Without spaces, it's easier to read, and you can better group an entity.
 
 ```html
 // Wrong
-<a href = "/signin">Sign In</a>
+<a href="/signin">Sign In</a>
 
 // Right
 <a href="/signin">Sign In</a>
@@ -157,11 +158,8 @@ Do not use entity references.
 In HTML, entity references are unnecessary except for characters with special meanings (e.g., `<` and `&`) and control characters or "invisible" characters (e.g., indistinguishable spaces).
 
 ```html
-// Wrong
-The symbol for classification is &ldquo;&sect;&rdquo;.
-
-// Right
-The symbol for classification is "§".
+// Wrong The symbol for classification is &ldquo;&sect;&rdquo;. // Right The
+symbol for classification is "§".
 ```
 
 #### `type` Attributes
@@ -172,12 +170,11 @@ Do not use type attributes for style sheets (unless not using CSS) and scripts (
 
 ```html
 // Wrong
-<link rel="stylesheet" href="/styles.css" type="text/css">
+<link rel="stylesheet" href="/styles.css" type="text/css" />
 
 // Right
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/styles.css" />
 ```
-
 
 ### HTML Formatting Rules
 
@@ -187,9 +184,9 @@ Use a new line for every block, list, or table element, and indent every such ch
 
 ```html
 <ul>
-  <li>One
-  <li>Two
-  <li>Three
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
 </ul>
 ```
 
@@ -199,7 +196,7 @@ we recommend quoting attribute values.
 
 ```html
 // Wrong
-<a class=sign-in-button>Sign In</a>
+<a class="sign-in-button">Sign In</a>
 
 // Right
 <a class="sign-in-button">Sign In</a>
@@ -217,10 +214,12 @@ Instead of presentational or cryptic names, always use class names that reflect 
 
 ```css
 // Wrong - meaningless
-.css-102837 {}
+.css-102837 {
+}
 
 // Right - specific
-.video {}
+.video {
+}
 ```
 
 #### Class Name Style
@@ -229,10 +228,12 @@ Use a class name that has as short as possible but necessary information.
 
 ```css
 // Wrong
-.navigation {}
+.navigation {
+}
 
 // Right
-.nav {}
+.nav {
+}
 ```
 
 #### Class Name Delimiters
@@ -241,10 +242,12 @@ Separate words in class names by a hyphen.
 
 ```css
 // Wrong
-.example_video {}
+.example_video {
+}
 
 // Right
-.example-video {}
+.example-video {
+}
 ```
 
 #### Type Selectors
@@ -253,10 +256,12 @@ Avoid qualifying class names with type selectors.
 
 ```css
 // Wrong
-section.example {}
+section.example {
+}
 
 // Right
-.example {}
+.example {
+}
 ```
 
 #### ID Selectors
@@ -267,13 +272,16 @@ Unique ID properties are difficult to ensure if they contain many components tha
 
 ```css
 // Wrong
-#nav {}
+#nav {
+}
 
 // Right
-.nav {}
+.nav {
+}
 ```
 
 #### Shorthand Properties
+
 Use shorthand properties where possible.
 
 ```css
@@ -349,7 +357,7 @@ Use a semicolon after every declaration.
 // Wrong
 .example {
   color: black;
-  text-align: center
+  text-align: center;
 }
 
 // Right
@@ -360,12 +368,13 @@ Use a semicolon after every declaration.
 ```
 
 #### Property Name Stops
+
 Use a space after a property name’s colon.
 
 ```css
 // Wrong
 h1 {
-  font-weight:bold;
+  font-weight: bold;
 }
 
 // Right
@@ -380,12 +389,15 @@ Separate selectors and declarations by new lines.
 
 ```css
 // Wrong
-h1, h2, h3 {
-  font-weight: bold; color: black;
+h1,
+h2,
+h3 {
+  font-weight: bold;
+  color: black;
 }
 
 // Right
-h1, 
+h1,
 h2,
 h3 {
   font-weight: bold;
@@ -426,6 +438,6 @@ html {
 @import url(https://pelagornis.com/...);
 
 html {
-  font-family: 'open sans', arial, sans-serif;
+  font-family: "open sans", arial, sans-serif;
 }
 ```

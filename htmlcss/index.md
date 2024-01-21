@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Html/CSS Style Guide
+title: HTML/CSS Style Guide
 ---
 
 ## Table of Contents

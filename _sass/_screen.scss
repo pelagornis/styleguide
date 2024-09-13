@@ -1,37 +1,43 @@
 @font-face {
-    font-family: "Open Sans";
-    src: url(/assets/fonts/OpenSans-Light) format('ttf');
+    font-family: "Inter";
+    src: url(/assets/fonts/Inter-Light) format('ttf');
     font-weight: 300;
 }
 
 @font-face {
-    font-family: "Open Sans";
-    src: url(/assets/fonts/OpenSans-Regular) format('ttf');
+    font-family: "Inter";
+    src: url(/assets/fonts/Inter-Regular) format('ttf');
     font-weight: 400;
 }
 
 @font-face {
-    font-family: "Open Sans";
-    src: url(/assets/fonts/OpenSans-Medium) format('ttf');
+    font-family: "Inter";
+    src: url(/assets/fonts/Inter-Medium) format('ttf');
     font-weight: 500;
 }
 
 @font-face {
-    font-family: "Open Sans";
-    src: url(/assets/fonts/OpenSans-SemiBold) format('ttf');
+    font-family: "Inter";
+    src: url(/assets/fonts/Inter-SemiBold) format('ttf');
     font-weight: 600;
 }
 
 @font-face {
-    font-family: "Open Sans";
-    src: url(/assets/fonts/OpenSans-Bold) format('ttf');
+    font-family: "Inter";
+    src: url(/assets/fonts/Inter-Bold) format('ttf');
     font-weight: 700;
 }
 
 @font-face {
-    font-family: "Open Sans";
-    src: url(/assets/fonts/OpenSans-ExtraBold) format('ttf');
+    font-family: "Inter";
+    src: url(/assets/fonts/Inter-ExtraBold) format('ttf');
     font-weight: 800;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url(/assets/fonts/Inter-Black) format('ttf');
+    font-weight: 900;
 }
 
 *, *:before, *:after {
@@ -45,7 +51,7 @@ html, body {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.0rem;
     line-height: 1.5;
     font-weight: 400;

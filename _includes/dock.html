@@ -1,0 +1,10 @@
+<ul>
+    {% for item in site.data.code %}
+      <li>
+        <a href="{{ item.url }}">
+          <img src="{{ item.icon }}" alt="{{ item.title }}">
+          {{ item.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>

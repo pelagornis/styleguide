@@ -52,9 +52,11 @@ html, body {
 
 body {
     font-family: 'Inter', sans-serif;
-    font-size: 1.0rem;
-    line-height: 1.5;
-    font-weight: 400;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 p {
@@ -65,150 +67,69 @@ p {
     border-radius: 1em;
 }
 
-.logo-container {
-    border-bottom: 1px solid #D7D7D7;
-}
 
-.breadcrumbs .breadcrumbs__item {
-    margin: 0;
-}
-
-.breadcrumbs__item, .breadcrumbs__link {
-    display: inline-block;
-    font-size: 12px;
-}
-
-.breadcrumbs__link {
-    padding: 10px;
-}
-
-.menu-toggle-container {
-    display: none;
-    position: relative;
-    width: 32px;
-    height: 32px;
-    align-items: center;
-    text-align: center;
-    cursor: pointer;
-}
-
-.menu-toggle {
-    position: relative;
-    width: 16px;
-}
-
-.menu-item .line-1,
-.menu-item .line-2 {
-    position: absolute;
-    height: 1px;
+.container {
     width: 100%;
-    background: #000;
-    transition-property: transform, top;
-    transition-delay: 0ms, 160ms;
-    transition-duration: 200ms;
+    height: 100%;
+    margin: auto;
 }
 
-.menu-item .line-1 {
-    top: -4px;
-}
-
-.menu-item .line-2 {
-    top: 4px;
-}
-
-#logo {
-    text-indent: -9999px;
-    height: 45px;
-    width: 100%;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    a {
-        display: block;
-        width: 170px;
-        height: 35px;
-        background-image: url(/assets/images/pelagornis.svg);
-        background-repeat: no-repeat;
-        background-size: 170px 35px;
-        background-position-x: -8px;
+.container--default {
+    max-width: 1140px;
+    .container-inner {
+        width: 92%;
+        max-width: calc(100% - 48px);
     }
 }
 
-nav[role="navigation"] {
-    width: 256px;
+.container-inner {
+    height: 100%;
+    margin: 0 auto;
+}
+
+header[role="navbar"] {
+    backdrop-filter: blur(24px);
+    display: flex;
     position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    padding: 20px 30px;
-    border-right: 1px solid #D7D7D7;
-    ul {
-        list-style: none;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
 
-        li {
-            border-bottom: none;
-            padding: 0.1em;
-            
-            &.active {
-                border-bottom: none;
-
-                a {
-                    font-weight: 600;
-                }
-            }
-        }
-
-        a {
-            color: #707070;
-            &:link {
-                text-decoration: none;
-                text-transform: none;
-                letter-spacing: 0;
-                font-size: 12px;
-                display: block;
-                margin-left: 18px;
-                padding: 8px 0 0;
-                border-bottom: none;
-                font-weight: 400;
-            }
-
-            &:hover {
-                color: #000;
+    .navbar-logo-containers {
+        display: flex;
+        align-items: center;
+        margin-right: 24px;
+        min-height: 60px;
+        min-height: var(--navbar-height);
+        .logo-icons {
+            display: flex;
+            .pelagornis-icons {
+                max-height: 1.5rem;
+                margin-right: 10px;
             }
         }
     }
 
-    h2 {
-        color: #383838;
-        font-size: 15px;
-        font-weight: 600;
-        margin-top: 15px;
-        margin-left: 10px;
-        margin-bottom: 0.25em;
-    }
 }
 
 main {
     max-width: 1440px;
     min-width: 320px;
-    margin-left: 256px;
     padding: 35px 30px 0;
     min-height: 100%;
     height: auto !important;
     height: 100%;
-}
 
-.breadcrumbs__item:not(:last-child)::after {
-    background: url(/assets/images/breadcrumbs.svg);
-    content: " ";
-    display: inline-block;
-    height: 10px;
-    width: 7px;
-    opacity: .5;
+    .p-title {
+        text-align: center;
+        margin-bottom: 1em;
+    }
 }
 
 footer[role="contentinfo"] {
-    margin-left: 256px;
-    background-color: #F4F4F4;
+    background-color: #FFF;
     
     .footer-container {
         display: flex;
@@ -231,19 +152,9 @@ footer[role="contentinfo"] {
         gap: 1.25em;
         margin: 0 0.4rem;
         padding: 0.2rem 0 0.6rem;
-        i {
-            &.github {
-                background-image: url(/assets/images/github_icon/github.svg);
-            }
-
-            &.feed {
-                background-image: url(/assets/images/rss_icon/rss.svg);
-            }
-            width: 16px;
-            height: 16px;
-            background-repeat: no-repeat;
-            background-size: 16px;
-            display: block;
+        .footer-other-item {
+            color: black;
+            font-size: small;
         }
     }
 }

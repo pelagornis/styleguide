@@ -7,4 +7,13 @@ layout: default
         <h1>Code Style Guide</h1>
         <p>Style guides for Pelagornis open-source projects</p>
     </div>
+    <ul>
+        {% for item in site.data.code[0].pages %}
+            <li>
+                <a href="{{ item.url }}">
+                    <img src="{{ item.icon }}" alt="{{ item.title }}"/>
+                </a>
+            </li>
+        {% endfor %}
+      </ul>
 </div>

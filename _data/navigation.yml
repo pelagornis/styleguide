@@ -1,7 +1,10 @@
 - header: Style Guide
   pages:
-  - title: HTML/CSS Style Guide
-    url: /htmlcss/
+  - title: HTML Style Guide
+    url: /html/
+    icon: /assets/
+  - title: CSS Style Guide
+    url: /css/
   - title: JavaScript Style Guide
     url: /javascript/
   - title: Kotlin Style Guide

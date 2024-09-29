@@ -3,24 +3,5 @@ layout: default
 ---
 
 <article class="page">
-  <header>
-    <ul class="breadcrumbs">
-      {% for nav in site.data.navigation %}
-        <li class="breadcrumbs__item">
-          <span class="breadcrumbs__link">
-            {{ nav.header }}
-          </span>
-        </li>
-      {% endfor %}
-      <li class="breadcrumbs__item">
-        <span class="breadcrumbs__link">
-          {{ page.title }}
-        </span>
-      </li>
-    </ul>
-
-    <h1>{{ page.title }}</h1>
-  </header>
-
   {{ content }}
 </article>

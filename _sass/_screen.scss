@@ -96,6 +96,7 @@ header[role="navbar"] {
     justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
+    border-bottom: 1px solid var(--color-navbar-border);
 
     .navbar-logo-containers {
         display: flex;
@@ -109,22 +110,35 @@ header[role="navbar"] {
                 max-height: 1.5rem;
                 margin-right: 10px;
             }
+            span {
+                font-weight: 600;
+                font-size: 16px;
+            }
         }
     }
-
 }
 
 main {
+    margin: auto;
     max-width: 1440px;
     min-width: 320px;
-    padding: 35px 30px 0;
+    padding: var(--navbar-height) 30px 0;
     min-height: 100%;
     height: auto !important;
     height: 100%;
 
     .p-title {
         text-align: center;
-        margin-bottom: 1em;
+        margin: 2.5em 0 0;
+        h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+        p {
+            font-size: 1em;
+            font-weight: 500;
+            color: #6C6C6C;
+        }
     }
 }
 

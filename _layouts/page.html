@@ -1,7 +1,13 @@
 ---
-layout: default
+layout: base
 ---
 
-<article class="page">
-  {{ content }}
-</article>
+{% include header.html  %}
+
+<main role="main">
+    <article class="page">
+        {{ content }}
+    </article>
+</main>
+{% include dock.html %}
+{% include footer.html %}

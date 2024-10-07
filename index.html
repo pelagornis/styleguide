@@ -2,18 +2,24 @@
 layout: default
 ---
 
-<div>
-    <div class="p-title">
-        <h1>Code Style Guide</h1>
-        <p>Style guides for Pelagornis open-source projects</p>
-    </div>
-    <ul>
+<div class="p-title">
+    <h1>Code Style Guide</h1>
+    <p>Style guides for Pelagornis open-source projects</p>
+</div>
+<div class="p-code-content">
+    <ul class="p-code-list">
         {% for item in site.data.code[0].pages %}
-            <li>
-                <a href="{{ item.url }}">
+            <li class="p-code-list-item">
+                <a href="{{ item.url }}" class="p-code-button">
                     <img src="{{ item.icon }}" alt="{{ item.title }}"/>
                 </a>
             </li>
         {% endfor %}
-      </ul>
+    </ul>
+    <article class="p-git-release">
+        <img src="/assets/images/icons/git.svg" alt="Git"/>
+        <p>
+            You can access the source Code with Git Repository.
+        </p>
+    </article>
 </div>

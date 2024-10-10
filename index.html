@@ -8,10 +8,10 @@ layout: default
 </div>
 <div class="p-code-content">
     <ul class="p-code-list">
-        {% for item in site.data.code[0].pages %}
+        {% for nav in site.data.navigation %}
             <li class="p-code-list-item">
-                <a href="{{ item.url }}" class="p-code-button">
-                    <img src="{{ item.icon }}" alt="{{ item.title }}"/>
+                <a href="{{ nav.url }}" class="p-code-button">
+                    <img src="{{ nav.icon }}" alt="{{ nav.title }}"/>
                 </a>
             </li>
         {% endfor %}

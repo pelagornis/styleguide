@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Swift Style Guide
+icon: /assets/images/icons/swift.svg
 ---
 
 ## Table of Contents

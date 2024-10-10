@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Shell Style Guide
+icon: /assets/images/icons/shell-script.svg
 ---
 
 ## Table of Contents

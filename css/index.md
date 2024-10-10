@@ -1,6 +1,7 @@
 ---
 layout: page
 title: CSS Style Guide
+icon: /assets/images/icons/css.svg
 ---
 
 ## Table of Contents

@@ -1,0 +1,30 @@
+- header: CSS Style Guide
+  url: /css/
+  icon: /assets/images/icons/css.svg
+- header: HTML Style Guide
+  url: /html/
+  icon: /assets/images/icons/html.svg
+- header: JavaScript Style Guide
+  url: /javascript/
+  icon: /assets/images/icons/javascript.svg
+- header: JSON Style Guide
+  url: /json/
+  icon: /assets/images/icons/json.svg
+- header: Kotlin Style Guide
+  url: /kotlin/
+  icon: /assets/images/icons/kotlin.svg
+- header: Markdown Style Guide
+  url: /markdown/
+  icon: /assets/images/icons/markdown.svg
+- header: Python Style Guide
+  url: /python/
+  icon: /assets/images/icons/python.svg/
+- header: Shell Style Guide
+  url: /shell/
+  icon: /assets/images/icons/shell-script.svg
+- header: Swift Style Guide
+  url: /swift/
+  icon: /assets/images/icons/swift.svg
+- header: TypeScript Style Guide
+  url: /typescript/
+  icon: /assets/images/icons/typescript.svg

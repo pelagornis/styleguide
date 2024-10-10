@@ -1,13 +1,16 @@
 <div class="dock">
   <div class="dock-container">
     <ul class="dock-list">
-      {% for item in site.data.code[0].pages %}
-        <li>
-          <a href="{{ item.url }}">
-            <img src="{{ item.icon }}" alt="{{ item.title }}">
+      {% for nav in site.data.navigation %}
+        <li class="dock-list-item">
+          <a href="{{ nav.url }}" class="dock-link">
+            <img src="{{ nav.icon }}" alt="{{ nav.title }}" class="dock-img"/>
+            {% if page.url == nav.url %}
+              <div class="dock-link-active"></div>
+            {% endif %}
           </a>
         </li>
       {% endfor %}
     </ul>
   </div>
-</div>  
+</div>

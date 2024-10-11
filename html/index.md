@@ -6,12 +6,8 @@ icon: /assets/images/icons/html.svg
 
 ## Table of Contents
 
-- [HTML](#html)
-
-  - [HTML Style Rules](#html-style-rules)
-  - [HTML Formatting Rules](#html-formatting-rules)
-
-## HTML
+- [HTML Style Rules](#html-style-rules)
+- [HTML Formatting Rules](#html-formatting-rules)
 
 ### HTML Style Rules
 

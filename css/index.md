@@ -6,12 +6,9 @@ icon: /assets/images/icons/css.svg
 
 ## Table of Contents
 
-- [CSS](#css)
-  - [CSS Style Rules](#css-style-rules)
-  - [CSS Formatting Rules](#css-formatting-rules)
+- [CSS Style Rules](#css-style-rules)
+- [CSS Formatting Rules](#css-formatting-rules)
 
-
-## CSS
 
 ### CSS Style Rules
 

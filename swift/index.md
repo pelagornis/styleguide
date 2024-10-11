@@ -6,13 +6,10 @@ icon: /assets/images/icons/swift.svg
 
 ## Table of Contents
 
-- [Swift](#swift)
-  - [Naming](#naming)
-  - [Swift Style Rules](#swift-style-rules)
-  - [Swift Formatting Rules](#swift-formatting-rules)
-  - [Patterns](#patterns)
-
-## Swift
+- [Naming](#naming)
+- [Swift Style Rules](#swift-style-rules)
+- [Swift Formatting Rules](#swift-formatting-rules)
+- [Patterns](#patterns)
 
 ### Naming
 

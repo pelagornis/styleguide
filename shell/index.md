@@ -6,11 +6,8 @@ icon: /assets/images/icons/shell-script.svg
 
 ## Table of Contents
 
-- [Shell](#shell)
-  - [Shell Style Rules](#shell-style-rules)
-  - [Shell Style Formatting](#shell-style-formatting)
-
-## Shell
+- [Shell Style Rules](#shell-style-rules)
+- [Shell Style Formatting](#shell-style-formatting)
 
 ### Shell Style Rules
 

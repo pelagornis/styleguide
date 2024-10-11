@@ -7,7 +7,7 @@ layout: base
 <main role="main">
     <article class="page">
         <header class="page-header">
-            <img src="{{ page.icon }}"></img>
+            <img src="{{ page.icon | relative_url }}"></img>
             <h1>{{ page.title }}</h1>
         </header>
         {{ content }}

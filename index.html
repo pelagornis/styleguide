@@ -10,14 +10,14 @@ layout: default
     <ul class="p-code-list">
         {% for nav in site.data.navigation %}
             <li class="p-code-list-item">
-                <a href="{{ nav.url }}" class="p-code-button">
-                    <img src="{{ nav.icon }}" alt="{{ nav.title }}"/>
+                <a href="{{ nav.url | relative_url }}" class="p-code-button">
+                    <img src="{{ nav.icon | relative_url }}" alt="{{ nav.title | relative_url }}"/>
                 </a>
             </li>
         {% endfor %}
     </ul>
     <article class="p-git-release">
-        <img src="/assets/images/icons/git.svg" alt="Git"/>
+        <img src="{{ '/assets/images/icons/git.svg' | relative_url }}" alt="Git"/>
         <p>
             You can access the source Code with Git Repository.
         </p>

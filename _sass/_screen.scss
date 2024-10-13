@@ -93,6 +93,7 @@ p {
 
 header[role="navbar"] {
     backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     display: flex;
     position: fixed;
     flex-wrap: wrap;

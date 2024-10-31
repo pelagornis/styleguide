@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
     spec.authors       = ["Chilensis"]
     spec.email         = ["chilensis.dev@gmail.com"]
   
-    spec.summary       = "Pelagornis StyleGuide"
+    spec.summary       = "Pelagornis Style Guide"
     spec.homepage      = "https://github.com/pelagornis/styleguide"
     spec.license       = "MIT"
   

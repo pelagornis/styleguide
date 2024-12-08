@@ -221,7 +221,7 @@ Use a semicolon after every declaration.
 // Wrong
 .example {
   color: black;
-  text-align: center;
+  text-align: center
 }
 
 // Right
@@ -238,7 +238,7 @@ Use a space after a property name’s colon.
 ```css
 // Wrong
 h1 {
-  font-weight: bold;
+  font-weight:bold;
 }
 
 // Right
@@ -253,9 +253,7 @@ Separate selectors and declarations by new lines.
 
 ```css
 // Wrong
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   font-weight: bold;
   color: black;
 }

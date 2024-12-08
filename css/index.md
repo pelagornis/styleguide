@@ -179,7 +179,7 @@ Use only lowercase.
 
 ```css
 // Wrong
-color: #f5f5f7;
+color: #F5F5F7;
 
 // Right
 color: #f5f5f7;

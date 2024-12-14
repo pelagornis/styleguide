@@ -75,4 +75,35 @@ import Builder
 import Snapkit
 ```
 
+#### Comment
+Use `///` to leave comments used for documentation.
+```swift
+/// Banner image exposed at the top of the main screen
+final class BannerView: UIView {
+
+  /// Image to float banner image View
+  var bannerImageView: ImageView!
+}
+```
+
+Use `// MARK:` to separate codes by type.
+```swift
+// MARK: Properties
+
+let nameLabel: UILabel!
+let dismissButton: UIButton!
+
+// MARK: Initalizer
+
+override init(frame: CGRect) {
+  // ...
+}
+
+// MARK: Actions
+
+override func dismissButtonDidTap() {
+  // ...
+}
+```
+
 ### Patterns

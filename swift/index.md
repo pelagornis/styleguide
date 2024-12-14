@@ -51,7 +51,7 @@ let name: String = ""
 
 #### Semicolons
 Semicolons (;) are not used, either to terminate or separate statements.
-```
+```swift
 /// Wrong
 func run() {
   let company = "Pelagornis";

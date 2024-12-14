@@ -13,7 +13,24 @@ icon: /assets/images/icons/swift.svg
 
 ### Naming
 
+#### Apple’s API Style Guidelines
+Apple’s [official Swift naming and API design guidelines](https://www.swift.org/documentation/api-design-guidelines/) hosted on swift.org are considered part of this style guide and are followed as if they were repeated here in their entirety.
+
+#### Identifiers
+Typically, identifiers contain only 7-bit ASCII characters. Unicode identifiers have clear, legitimate meanings in the problem area of the code base (e.g., Greek characters representing mathematical concepts) and are acceptable if the team that owns the code understands them well.
+
+```swift
+/// Wrong
+let 😎 = "😎"
+
+/// Right
+let nice = "😎"
+```
+#### Initializers
+
+
 ### Swift Style Rules
+
 
 ### Swift Formatting Rules
 
@@ -54,14 +71,14 @@ Semicolons (;) are not used, either to terminate or separate statements.
 ```swift
 /// Wrong
 func run() {
-  let company = "Pelagornis";
-  print("Hello \(company)");
+    let company = "Pelagornis";
+    print("Hello \(company)");
 }
 
 /// Right
 func run() {
-  let company = "Pelagornis";
-  print("Hello \(company)")
+    let company = "Pelagornis";
+    print("Hello \(company)")
 }
 ```
 
@@ -82,7 +99,7 @@ Use `///` to leave comments used for documentation.
 final class BannerView: UIView {
 
   /// Image to float banner image View
-  var bannerImageView: ImageView!
+    var bannerImageView: ImageView!
 }
 ```
 
@@ -107,3 +124,31 @@ override func dismissButtonDidTap() {
 ```
 
 ### Patterns
+Prefer to initialize properties at init time, if possible, without using the force unwrapping option.
+
+```swift
+/// Wrong
+final class Company: NSObject {
+
+    var name: String!
+
+    init() {
+        super.init()
+        name = "Pelagornis"
+    }
+}
+
+/// Right
+final class Company: NSObject {
+
+    var name: String
+
+    init() {
+        name = ""
+        super.init()
+    }
+}
+```
+
+
+

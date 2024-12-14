@@ -49,6 +49,21 @@ let name: String = ""
 
 ```
 
+#### Semicolons
+Semicolons (;) are not used, either to terminate or separate statements.
+```
+/// Wrong
+func run() {
+  let company = "Pelagornis";
+  print("Hello \(company)");
+}
+
+/// Right
+func run() {
+  let company = "Pelagornis";
+  print("Hello \(company)")
+}
+```
 
 #### Import
 The module import is sorted alphabetically, import the built-in framework first, separated by blank lines, and import the third-party framework.

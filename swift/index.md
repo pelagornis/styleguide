@@ -27,6 +27,61 @@ let 😎 = "😎"
 let nice = "😎"
 ```
 #### Initializers
+For clarity, the initializer argument that corresponds directly to the stored property has the same property and name. Use explicit `self.` to clearly distinguish between assignments.
+
+```swift
+/// Wrong
+public struct Company {
+    public let name: String
+    public let location: String
+
+    public init(name: String, location place: String) {
+        name = name
+        location = place
+    }
+}
+
+/// Right
+public struct Company {
+    public let name: String
+    public let location: String
+
+    public init(name: String, location: String) {
+        self.name = name
+        self.location = location
+    }
+}
+```
+
+#### Static and Class Properties
+Static and class properties that return instances of the declaring type are not suffixed with the name of the type.
+
+```swift
+/// Wrong
+public class UIColor {
+    public class var blackColor: UIColor {
+        // ...
+    }
+}
+
+/// Right
+public class UIColor {
+    public class var black: UIColor {
+        // ...
+    }
+}
+```
+
+#### Global Constants
+Like other variables, the global constant is `lowerCamelCase`.
+
+```swift
+/// Wrong
+let VERSION = "1.0.0"
+
+/// Right
+let version = "1.0.0"
+```
 
 
 ### Swift Style Rules
@@ -124,6 +179,8 @@ override func dismissButtonDidTap() {
 ```
 
 ### Patterns
+
+#### Unwrapping
 Prefer to initialize properties at init time, if possible, without using the force unwrapping option.
 
 ```swift
@@ -150,5 +207,37 @@ final class Company: NSObject {
 }
 ```
 
+#### Optional Binding
+`guard else` is written on the same line if it does not impair readability or does not exceed 100 lines.
+
+#### Blank
+Only one blank line is allowed
+
+```swift
+/// Wrong
+func run() {
+    let name = ""
 
 
+    print(name)
+}
+
+/// Right
+func run() {
+    let name = ""
+
+    print(name)
+}
+```
+
+#### Spacing
+Give a space around the curly brackets.
+
+```swift
+/// Wrong
+value.filter{true}.map{$0}
+
+/// Right
+value.filter { true }.map { $0 }
+
+```

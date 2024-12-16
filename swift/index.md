@@ -208,7 +208,11 @@ final class Company: NSObject {
 ```
 
 #### Optional Binding
-`guard else` is written on the same line if it does not impair readability or does not exceed 100 lines.
+`guard else` is written on the same line if it does not impair readability or does not exceed 100 lines. </br>
+And Prefer to use guard statements rather than if statements to minimize overlap.
+
+#### Defer
+Consider using `defer block` if you need a cleanup code at multiple end points.
 
 #### Blank
 Only one blank line is allowed

@@ -210,7 +210,7 @@ final class Company: NSObject {
 #### Optional Binding
 `guard else` is written on the same line if it does not impair readability or does not exceed 100 lines.
 
-And Prefer to use guard statements rather than if statements to minimize overlap.
+And Prefer to use `guard` statements rather than `if` statements to minimize overlap.
 
 #### Defer
 Consider using `defer block` if you need a cleanup code at multiple end points.
@@ -246,3 +246,52 @@ value.filter{true}.map{$0}
 value.filter { true }.map { $0 }
 
 ```
+
+#### Access Modifier
+Access control should be as strict as possible, preferring `public` to `open` and `private` to `fileprivate` unless that level is required.
+
+#### Global Function
+It prefers to define methods in the type definition section, and does not define possible global functions
+```swift
+/// Wrong
+func age(_ person: Person) {
+    // ...
+}
+
+/// Right
+struct Person {
+    var age: Int {
+        // ...
+    }
+}
+```
+
+#### Property
+Extract complex property observers into methods. The purpose is to reduce overlap, to separate side effects from attribute declarations, and to make the use of implicitly forwarded parameters explicitly `oldValue`.
+
+```swift
+/// WRONG
+public class TextField {
+  public var text: String? {
+    didSet {
+      guard oldValue != text else { 
+        return
+      }
+    }
+  }
+}
+
+/// RIGHT
+public class TextField {
+  public var text: String? {
+    didSet { textDidUpdate(from: oldValue) }
+  }
+
+  private func textDidUpdate(from oldValue: String?) {
+    guard oldValue != text else {
+      return
+    }
+  }
+}
+```
+

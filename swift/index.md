@@ -295,3 +295,195 @@ public class TextField {
 }
 ```
 
+#### Static Type
+If a method needs to be redefined, the default type method should be `static` because the author must choose a `static` type instead of using the `class` keyword.
+
+```swift
+/// Wrong
+class Company {
+    class func checkStaff(_ member: Member, time: Date) {
+        // ...
+    }
+}
+
+/// Right
+class Company {
+    static func checkStaff(_ member: Member, _ time: Date) {
+        // ...
+    }
+}
+```
+
+#### Final Keyword
+If inheritance is unnecessary, add the `final` keyword to the default class.
+
+```swift
+/// Wrong
+class Repository {
+    // ...
+}
+
+/// Right
+final class Repository {
+    // ...
+}
+```
+
+#### Immutable or Computed Static Properties
+
+Prefer immutable or computed `static` properties over mutable ones whenever possible. Use stored `static let` properties or computed `static var` properties over stored `static var` properties whenever possible, as stored `static var` properties are global mutable state.
+
+```swift
+/// Wrong
+enum Color {
+    static var red = DynamicColor(...)
+}
+
+/// Right
+enum Color {
+    static let red = DynamicColor(...)
+}
+```
+```swift
+/// Wrong
+struct Timmer {
+    var count: Int
+
+    static var start = Timmer(count: 0)
+}
+
+/// Right
+struct Timmer {
+    var count: Int
+
+    static var start: Timer {
+        Timmer(count: 0)
+    }
+}
+```
+
+#### Enum Type
+Preferred to list all cases for accuracy consideration rather than using `default` cases when switching enumeration types.
+
+```swift
+/// Not Preferred
+enum Color {
+    case red
+    case green
+    case blue
+
+    var rawValue: String {
+        switch self {
+            case .red:
+            return "Red"
+            case .green:
+            return "Green"
+            case .blue:
+            return "Blue"
+            default:
+            return "Not provided Color"
+        }
+    }
+}
+
+/// Preferred
+enum Color {
+    case red
+    case green
+    case blue
+
+    var rawValue: String {
+        switch self {
+            case .red:
+            return "Red"
+            case .green:
+            return "Green"
+            case .blue:
+            return "Blue"
+        }
+    }
+}
+```
+
+#### Return Keyword
+Omit the unnecessary `return` keyword.
+
+```swift
+/// Wrong
+var size: CGSize {
+    return CGSize(
+        width: 100.0,
+        height: 100.0
+    )
+}
+
+/// Right
+var size: CGSize {
+    CGSize(
+        width: 100.0,
+        height: 100.0
+    )
+}
+```
+
+#### AnyObject Type
+Use `AnyObject` instead of `class` in protocol definitions.
+
+```swift
+// WRONG
+protocol Request: class {
+    // ...
+}
+
+// RIGHT
+protocol Request: AnyObject {
+    // ...
+}
+```
+
+#### Extension
+Extension specifies access control for each declaration individually.
+
+```swift
+/// Wrong
+public extension Company {
+    func addStaff(_ member: Member) {
+        // ...
+    }
+}
+
+/// Right
+extension Company {
+    public func addStaff(_ member: Member) {
+        // ...
+    }
+}
+```
+
+#### Logging
+Prefer dedicated logging systems like `os_log` or `swift-log` over writing directly to standard out using `print(…)`, `debugPrint(…)`, or `dump(…)`.
+
+#### Equatable Type
+Prefer using the generated `Equatable` implementation when comparing properties of all types.
+
+#### Void Type
+Avoid using `()` as a type and prefer to use `Void`.
+```swift
+/// Wrong
+let response: (Response<(), Error>) -> ()
+
+/// Right
+let response: (Response<Void, Error>) -> Void 
+```
+
+Avoid using `Void()` and prefer to use `()`
+
+```swift
+let response: (Response<Void, Error>) -> Void 
+
+/// Wrong
+response(.success(Void()))
+
+/// Right
+response(.success(()))
+```

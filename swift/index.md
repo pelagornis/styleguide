@@ -86,6 +86,41 @@ let version = "1.0.0"
 
 ### Swift Style Rules
 
+#### Types 
+Don't include easily deducible types.
+```swift
+/// Wrong
+let status: Bool = true
+let statusCode: String = 400
+
+/// Right
+let status = true
+let statusCode = 400
+```
+
+Prefer letting the type of a variable or property be inferred from the right-hand-side value rather than writing the type explicitly on the left-hand side. 
+
+```swift
+/// Wrong
+struct Command {
+    let bash: Alias = .init(executableURL: "/bin/bash", dashc: "-c")
+
+    func run() {
+        let command: Arguments = .init("ls")
+        bash.run(command)
+    }
+}
+
+/// Right
+struct Command {
+    let bash = Alias(executableURL: "/bin/bash", dashc: "-c")
+
+    func run() {
+        let command = Arguments("ls")
+        bash.run(command)
+    }
+}
+```
 
 ### Swift Formatting Rules
 

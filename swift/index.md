@@ -122,6 +122,186 @@ struct Command {
 }
 ```
 
+#### Self Keyword
+Don't use `self` unless it's necessary for disambiguation.
+
+```swift
+/// Wrong
+final class Server {
+    private let statusCode: Int32
+    private let result: Result
+    private var serverRequestSuccess: Bool
+
+    init(statusCode: Int32, result: Result) {
+        self.statusCode = statusCode
+        self.result = result
+        self.serverRequestSuccess = !result.success.isEmpty
+    }
+}
+
+/// Right
+final class Server {
+    private let statusCode: Int32
+    private let result: Result
+    private var serverRequestSuccess: Bool
+
+    init(statusCode: Int32, result: Result) {
+        self.statusCode = statusCode
+        self.result = result
+        serverRequestSuccess = !result.success.isEmpty
+    }
+}
+```
+
+Bind to `self` when upgrading from a weak reference.
+```swift
+/// Wrong
+final class AClass {
+    func run(completion: () -> Void) {
+        Server.run() { [weak self] result in
+            guard let strongSelf = self else { return }
+            // ...
+            completion()
+        }
+    }
+}
+
+/// Right
+final class AClass {
+    func run(completion: () -> Void) {
+        Server.run() { [weak self] result in
+            guard let self else { return }
+            // ...
+            completion()
+        }
+    }
+}
+```
+
+#### Collection Types
+Add a trailing comma on the last element of a multi-line array.
+```swift
+/// Wrong
+let color: [Color] = [
+    .black,
+    .red,
+    .blue
+]
+
+/// Right
+let color: [Color] = [
+    .black,
+    .red,
+    .blue,
+]
+```
+
+There should be no spaces inside the backets of collection literals.
+```swift
+/// Wrong
+let constraints = [ top, right, left, bottom ]
+
+/// Right
+let constraints = [top, right, left, bottom]
+```
+
+#### Space
+Colons should always be followed by a space. but not preceded by a space.
+```swift
+/// Wrong
+let token : Token = "#sidi3wjdia2sdpwd1"
+
+/// Right
+let token: Token = "#sidi3wjdia2sdpwd1"
+```
+
+Place a space on either side of a return arrow for readability.
+```swift
+/// Wrong
+func request()->Result {
+    // ...
+}
+
+/// Right
+func request() -> Result {
+    // ...
+}
+```
+
+#### Parentheses
+Omit unnecessary parentheses.
+```swift
+/// Wrong
+if (count > 0) { // ... }
+let event = allEvents.map() { // ... }
+
+/// Right
+if count > 0 { // ... }
+let event = allEvents.map { // ... }
+```
+
+#### Enum Type
+Omit enum associated values from case statements when all arguments are unlabeled.
+```swift
+/// Wrong
+if case .response(_) = Response { // ... }
+
+switch result {
+    case .success(_, _):
+    // ...
+}
+
+/// Right
+if case .response = Response { // ... }
+
+switch result {
+    case .success:
+    // ...
+}
+```
+
+When destructuring an enum case or a tuple, place the `let` keyword inline, adjacent to each individual property assignment.
+```swift
+/// Wrong
+switch result {
+case let .success(value):
+  // ...
+case let .error(statusCode, description):
+  // ...
+}
+
+/// Right
+switch result {
+case .success(let value):
+  // ...
+case .error(let statusCode, let description):
+  // ...
+}
+```
+
+#### Attribute Annotations
+Place the properties of the function, type, and calculated properties on the line above the declaration.
+```swift
+/// Wrong
+@objc func tapAction() {
+    // ...
+}
+@discardableResult func run() {
+    // ...
+}
+
+/// Right
+@objc
+func tapAction() {
+    // ...
+}
+
+@discardableResult
+func run() {
+    // ...
+}
+```
+
 ### Swift Formatting Rules
 
 #### Indentation

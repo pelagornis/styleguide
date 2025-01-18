@@ -86,6 +86,83 @@ let version = "1.0.0"
 
 ### Swift Style Rules
 
+#### Access Control
+Omit the internal keyword when defining types, properties, or functions with an internal access control level.
+
+```swift
+/// Wrong
+internal  class Base {
+    internal  init() {
+        // ...
+    }
+
+    internal  func run() {
+        // ...
+    }
+}
+
+/// Right
+class Base {
+    init() {
+        // ...
+    }
+
+    func run() {
+        // ...
+    }
+}
+```
+
+#### Attribute Annotations
+Place the properties of the function, type, and calculated properties on the line above the declaration.
+```swift
+/// Wrong
+@objc func tapAction() {
+    // ...
+}
+@discardableResult func run() {
+    // ...
+}
+
+/// Right
+@objc
+func tapAction() {
+    // ...
+}
+
+@discardableResult
+func run() {
+    // ...
+}
+```
+
+#### Collection Types
+Add a trailing comma on the last element of a multi-line array.
+```swift
+/// Wrong
+let color: [Color] = [
+    .black,
+    .red,
+    .blue
+]
+
+/// Right
+let color: [Color] = [
+    .black,
+    .red,
+    .blue,
+]
+```
+
+There should be no spaces inside the backets of collection literals.
+```swift
+/// Wrong
+let constraints = [ top, right, left, bottom ]
+
+/// Right
+let constraints = [top, right, left, bottom]
+```
+
 #### Types 
 Don't include easily deducible types.
 ```swift
@@ -178,33 +255,6 @@ final class AClass {
 }
 ```
 
-#### Collection Types
-Add a trailing comma on the last element of a multi-line array.
-```swift
-/// Wrong
-let color: [Color] = [
-    .black,
-    .red,
-    .blue
-]
-
-/// Right
-let color: [Color] = [
-    .black,
-    .red,
-    .blue,
-]
-```
-
-There should be no spaces inside the backets of collection literals.
-```swift
-/// Wrong
-let constraints = [ top, right, left, bottom ]
-
-/// Right
-let constraints = [top, right, left, bottom]
-```
-
 #### Space
 Colons should always be followed by a space. but not preceded by a space.
 ```swift
@@ -278,28 +328,170 @@ case .error(let statusCode, let description):
   // ...
 }
 ```
-
-#### Attribute Annotations
-Place the properties of the function, type, and calculated properties on the line above the declaration.
+#### Declaration
+Place simple attributes for stored properties on the same line as the rest of the declaration.
+Complex attributes with named arguments, or more than one unnamed argument, should be placed on the previous line.
 ```swift
 /// Wrong
-@objc func tapAction() {
+struct BaseView: View {
+
+    @StateObject
+    var object = ObservableObject()
+
+    @available(*, unavailable, message: "No longer in production") var oldView: some View {
+        // ...
+    }
+
+}
+
+/// Right
+struct BaseView: View {
+
+    @StateObject var object = ObservableObject()
+
+    @available(*, unavailable, message: "No longer in production")
+    var oldView: some View {
+        // ...
+    }
+
+}
+```
+
+#### Empty Space
+Include a single space in an empty set of braces(`{ }`).
+```swift
+/// Wrong
+extension UIView: Buildable {}
+
+/// Right
+extension UIView: Buildable { }
+```
+
+#### Functions
+Omit `Void` return types from function definitions.
+```swift
+/// Wrong
+func run() -> Void {
     // ...
 }
-@discardableResult func run() {
+/// Right
+func run() {
+    // ...
+}
+```
+
+Separate long function declarations with line breaks before each argument label, and before the return signature or any effects (`async`, `throws`).
+```swift
+class Company {
+    /// Wrong
+    func addMember(name: String, email: String, number: String) -> Member {
+        // ...
+    }
+
+    /// Wrong
+    func addMember(
+        name: String,
+        email: String,
+        number: String)
+    -> Member {
+        // ...
+    }
+
+    /// Right
+    func addMember(
+        name: String,
+        email: String,
+        number: String
+    )
+    -> Member
+    {
+        // ...
+    }
+}
+```
+
+Long function invocations should also break on each argument.
+```swift
+/// Wrong
+Company.addMember(name: "Zepa", email: "official@pelagornis.com", number: "010-1234-4567")
+
+Company.addMember(
+    name: "Zepa",
+    email: "official@pelagornis.com",
+    number: "010-1234-4567"
+)
+
+/// Right
+Company.addMember(
+    name: "Zepa",
+    email: "official@pelagornis.com",
+    number: "010-1234-4567")
+```
+
+Remove blank lines between chained functions.
+```swift
+/// Wrong
+var item: [String] {
+    datas
+      .filter { $0.fetch() }
+
+      .map { $0.id }
+}
+
+/// Right
+var item: [String] {
+    datas
+      .filter { $0.fetch() }
+      .map { $0.id }
+}
+```
+
+#### Closure
+Favor `Void` return types over () in closure declarations.
+```swift
+/// Wrong
+func run(completion: () -> ()) {
     // ...
 }
 
 /// Right
-@objc
-func tapAction() {
+func run(completion: () -> Void) {
+    // ...
+}
+```
+
+Name unused closure parameters as underscores(`_`).
+```swift
+/// Wrong
+run() { environment, command in
+    Task.run(command)
+}
+
+/// Right
+run() { _, command in
+    Task.run(command)
+}
+```
+
+Omit `Void` return types from closure expressions.
+```swift
+run() { command -> Void in
     // ...
 }
 
-@discardableResult
-func run() {
+/// Right
+run() { command in
     // ...
 }
+```
+
+Prefer trailing closure syntax for closure arguments with no parameter name.
+```swift
+// WRONG
+member.map({ $0.id })
+
+// RIGHT
+member.map { $0.id }
 ```
 
 ### Swift Formatting Rules

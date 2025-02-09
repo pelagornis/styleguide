@@ -11,7 +11,7 @@ icon: /assets/images/icons/json.svg
 
 ### Naming
 
-### Key Names
+#### Key Names
 Use **camelCase** for key names to maintain consistency across different programming languages.
   
 ```json

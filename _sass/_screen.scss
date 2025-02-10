@@ -92,6 +92,15 @@ p {
     margin: 0 auto;
 }
 
+.button {
+    margin-top: 3rem;
+    background-color: var(--color-navbar-border);
+    color: black;
+    justify-content: center;
+    border: 1px solid var(--button-border);
+    border-radius: 0.5rem;
+}
+
 header[role="navbar"] {
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);

@@ -73,7 +73,7 @@ type ApiResponse = { data: TokenType[]; error?: string };
 #### Strict Mode
 Always enable TypeScript's **strict mode** (`"strict": true` setting). This enforces a stricter type-checking policy to ensure safer code.
 
-#### **Always Use `const` or `let`
+#### Always Use `const` or `let`
 Never use `var`. Always use `const` or `let` for variable declarations.
 
 ```typescript

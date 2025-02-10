@@ -82,7 +82,7 @@ p {
 ul, ol, li, dl, dt, dd, hgroup, blockquote, figure,
 form, fieldset, input, legend, pre, abbr {
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 main li {
@@ -99,8 +99,8 @@ pre, code, address, caption, th, figcaption {
     margin-block-start: 1em;
     margin-block-end: 1em;
     font-size: 13px;
-    font-weight: regular;
-    font-style: normal
+    font-weight: normal;
+    font-style: normal;
 }
 
 code {
@@ -117,31 +117,31 @@ pre code {
 
 fieldset, iframe, img {
     width: 100%;
-    border: none
+    border: none;
 }
 
 caption, th {
-    text-align: left
+    text-align: left;
 }
 
 table {
     border-collapse: collapse;
-    border-spacing: 0
+    border-spacing: 0;
 }
 
 article, aside, footer, header, nav, main, section, summary, details,
 hgroup, figure, figcaption {
-    display: block
+    display: block;
 }
 
 audio, canvas, video, progress {
     display: inline-block;
-    vertical-align: baseline
+    vertical-align: baseline;
 }
 
 button {
     font: inherit;
-    vertical-align: middle
+    vertical-align: middle;
 }
 
 nav {

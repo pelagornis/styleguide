@@ -28,7 +28,7 @@ Function names should start with a verb and clearly indicate the function’s pu
 function fetchUserData(id: number) { /* ... */ }
 ```
   
-#### Classes and Interfaces**
+#### Classes and Interfaces
 Use **PascalCase** for class and interface names.
 
 ``` typescript

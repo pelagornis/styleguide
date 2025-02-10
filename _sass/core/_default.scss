@@ -107,6 +107,12 @@ code {
     border-radius: 6px;
 }
 
+pre code {
+    padding: 0;
+    border-radius: 0;
+    font-size: 100%;
+}
+
 fieldset, iframe, img {
     width: 100%;
     border: none

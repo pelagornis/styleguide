@@ -14,20 +14,20 @@ icon: /assets/images/icons/python.svg
 
 #### Variable and Function Names
 **Variable and Function Names**: Use `snake_case` (all lowercase letters, with underscores separating words).
-  ```python
-    # Wrong
-    UserName = "Zepa"
-    TotalCount = 100
+```python
+# Wrong
+UserName = "Zepa"
+TotalCount = 100
 
-    def ProcessData(data):
-        return [item.strip() for item in data]
+def ProcessData(data):
+    return [item.strip() for item in data]
 
-    # Right
-    user_name = "zepa"
-    total_count = 100
+# Right
+user_name = "zepa"
+total_count = 100
 
-    def process_data(data):
-        return [item.strip() for item in data]
+def process_data(data):
+    return [item.strip() for item in data]
 ```
 
 **Class Names**: Use `CamelCase`.
@@ -78,8 +78,8 @@ Use **4 spaces** for indentation. Do not use tabs.
 ```python
 # Wrong
 def example_function():
-  if True:
-    print("Success")
+    if True:
+        print("Success")
 
 # Right
 def example_function():

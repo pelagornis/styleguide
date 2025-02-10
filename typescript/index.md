@@ -102,7 +102,7 @@ const fetchData = async (url: string): Promise<string> => {
 #### Avoid Using `Function` Type
 Avoid using the `Function` type. Instead, use a specific function signature.
 
-```typscript
+```typescript
 type AddFunction = (a: number, b: number) => number;
 const add: AddFunction = (a, b) => a + b;
 ```
@@ -110,7 +110,7 @@ const add: AddFunction = (a, b) => a + b;
 #### Use `as const` for Literal Types
 Use `as const` when dealing with constant values to infer literal types.
 
-```typscript
+```typescript
 const direction = "up" as const;
 ```
 

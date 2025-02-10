@@ -14,7 +14,7 @@ icon: /assets/images/icons/kotlin.svg
 #### Classes and Interfaces
 
 - **Class names**: Use PascalCase, which starts with an uppercase letter.
-- 
+
 ```kotlin
 class CarModel(val modelName: String)
 class UserProfile(val userId: Int, val userName: String)

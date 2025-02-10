@@ -5,9 +5,10 @@ icon: /assets/images/icons/kotlin.svg
 ---
 
 ## Table of Contents
--[Naming](#naming)
--[Kotlin Style Rules](#kotlin-style-rules)
--[Kotlin Formatting Rules](#kotlin-formatting-rules)
+
+- [Naming](#naming)
+- [Kotlin Style Rules](#kotlin-style-rules)
+- [Kotlin Formatting Rules](#kotlin-formatting-rules)
 
 ### Naming
 

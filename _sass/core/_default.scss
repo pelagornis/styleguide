@@ -65,6 +65,10 @@ h6 {
     font-weight: bold;
 }
 
+strong {
+    font-weight: semibold;
+}
+
 p {
     display: block;
     margin-block-start: 0.5em;
@@ -72,7 +76,7 @@ p {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-size: 1em;
-    font-weight: 500;
+    font-weight: regular;
 }
 
 ul, ol, li, dl, dt, dd, hgroup, blockquote, figure,
@@ -95,7 +99,7 @@ pre, code, address, caption, th, figcaption {
     margin-block-start: 1em;
     margin-block-end: 1em;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: regular;
     font-style: normal
 }
 

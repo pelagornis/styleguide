@@ -92,7 +92,7 @@ let result: unknown;
 #### Prefer Explicit Return Types
 Always specify an explicit return type for functions.
 
-```typscript
+```typescript
 const fetchData = async (url: string): Promise<string> => {
   const response = await fetch(url);
   return response.text();

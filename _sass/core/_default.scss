@@ -99,6 +99,14 @@ pre, code, address, caption, th, figcaption {
     font-style: normal
 }
 
+code {
+    padding: .2em .4em;
+    background-color: #f6f7f8;
+    font-size: 85%;
+    white-space: break-spaces;
+    border-radius: 6px;
+}
+
 fieldset, iframe, img {
     width: 100%;
     border: none

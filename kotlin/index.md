@@ -104,7 +104,7 @@ fun isActive(user: User): Boolean {
 #### No trailing spaces
 Remove unnecessary trailing spaces from the end of lines.
 
-####Line Length
+#### Line Length
 Limit lines to **120 characters** for readability.
 
 ##### Indentation

@@ -11,9 +11,8 @@ icon: /assets/images/icons/kotlin.svg
 
 ### Naming
 
-#### Classes and Interfaces
-
-- **Class names**: Use PascalCase, which starts with an uppercase letter.
+#### Class names
+Use PascalCase, which starts with an uppercase letter.
 
 ```kotlin
 class CarModel(val modelName: String)
@@ -21,7 +20,8 @@ class UserProfile(val userId: Int, val userName: String)
 class PaymentService(val paymentGateway: String)
 ```
 
-- **Interface names**: Use the same convention as classes, but prefix with `I` only if it is common in your codebase or necessary for clarity.
+#### Interface names
+Use the same convention as classes, but prefix with `I` only if it is common in your codebase or necessary for clarity.
 
 ```kotlin
 interface IStorage {
@@ -35,7 +35,8 @@ interface IRepository<T> {
 }
 ```
 
-- **Abstract class names**: Follow the same conventions as class names, often using terms like `Base` or `Abstract` to indicate abstraction.
+#### Abstract class names
+Follow the same conventions as class names, often using terms like `Base` or `Abstract` to indicate abstraction.
 
 ```kotlin
 abstract class AbstractShape {
@@ -192,7 +193,7 @@ val result = list.map {
 }
 ```
 
-### Control Statements
+#### Control Statements
 - **Avoid single-expression functions** if it harms readability. If the body contains complex logic, break it into multiple lines or use a helper function.
 
 ```kotlin

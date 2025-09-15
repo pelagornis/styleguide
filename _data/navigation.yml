@@ -1,6 +1,9 @@
 - header: CSS Style Guide
   url: /css/
   icon: /assets/images/icons/css.svg
+- header: Dart Style Guide
+  url: /dart/
+  icon: /assets/images/icons/dart.svg
 - header: HTML Style Guide
   url: /html/
   icon: /assets/images/icons/html.svg

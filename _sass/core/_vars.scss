@@ -30,4 +30,14 @@
     --leading-normal: 1.7;
     --leading-tight: 1.35;
     --leading-snug: 1.5;
+
+    /* Breakpoints (for reference in media queries) */
+    --bp-sm: 480px;
+    --bp-md: 768px;
+    --bp-lg: 1024px;
+
+    /* Layout */
+    --dock-height: 72px;
+    --page-gutter: 30px;
+    --page-gutter-sm: 16px;
 }

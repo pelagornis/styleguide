@@ -73,9 +73,12 @@ p {
     border-radius: 10px;
     margin: 1.25em 0;
     border: 1px solid var(--color-border);
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
 
     pre {
         margin: 0;
+        min-width: min-content;
     }
 }
 
@@ -145,10 +148,14 @@ main {
     margin: auto;
     max-width: 1440px;
     min-width: 320px;
-    padding: var(--navbar-height) 30px 0;
+    padding: var(--navbar-height) var(--page-gutter) 0;
     min-height: 100vh;
     height: auto !important;
     height: 100%;
+
+    &:has(.page) {
+        padding-bottom: calc(var(--dock-height) + 2.5rem);
+    }
 
     .page {
         margin: auto;
@@ -245,6 +252,14 @@ main {
         img {
             width: auto;
             max-width: 100%;
+        }
+
+        table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-bottom: 1.25em;
         }
     }
 
@@ -414,6 +429,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
 
     .dock-container {
         display: flex;

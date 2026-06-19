@@ -14,6 +14,7 @@ icon: /assets/images/icons/javascript.svg
 - [Error Handling](#error-handling)
 - [Performance](#performance)
 - [Testing](#testing)
+- [Tooling](#tooling)
 
 ### Naming
 
@@ -72,10 +73,10 @@ const y = 10;
 
 #### Quotes
 
-For string literals, use **single quotes** (`'`). However, when performing string interpolation, use **backticks** (```) to create template literals.
+For string literals, use **single quotes** (`'`). However, when performing string interpolation, use **backticks** (`` ` ``) to create template literals.
 
 ```js
-const company = "pelagornis";
+const company = 'pelagornis';
 const greeting = `Hello, ${company}`;
 ```
 
@@ -278,18 +279,57 @@ export function Data(items) {}
 
 Document functions using `JSDoc` comments. Provide clear descriptions of parameters, return values, and side effects to help others (and yourself) understand your code.
 
-````js
+```js
 /**
  * Returns the sum of two numbers.
  * @param {number} a - The first number
  * @param {number} b - The second number
  * @returns {number} The sum of a and b
  */
-function add(a, b) { return a + b; }
+function add(a, b) {
+  return a + b;
+}
+```
+
+#### ES Modules
+
+Use ES module syntax (`import`/`export`) instead of CommonJS (`require`/`module.exports`) for new code.
+
+```js
+// Wrong - CommonJS in a module project
+const { fetchData } = require("./api");
+module.exports = { fetchData };
+
+// Right - ES modules
+import { fetchData } from "./api.js";
+export { fetchData };
+```
+
+Prefer named exports over default exports for better refactoring and IDE support.
+
+```js
+// Wrong - default export
+export default function fetchUser() {}
+
+// Right - named export
+export function fetchUser() {}
+```
+
+Group imports in this order: built-in modules, external packages, then local modules. Separate each group with a blank line.
+
+```js
+import fs from "node:fs";
+
+import express from "express";
+
+import { fetchUser } from "./services/user.js";
+import { validateEmail } from "./utils/validation.js";
+```
 
 ### Modern JavaScript Features
 
 #### Destructuring Assignment
+
 Use destructuring for cleaner variable assignment and function parameters.
 
 ```js
@@ -319,7 +359,7 @@ const config = {
 };
 
 const { database: { host, credentials: { username } } } = config;
-````
+```
 
 #### Spread and Rest Operators
 
@@ -1016,4 +1056,41 @@ runner.test("fetchUserData should use fetch", async () => {
     global.fetch = originalFetch;
   }
 });
+```
+
+### Tooling
+
+#### ESLint and Prettier
+
+Use ESLint for linting and Prettier for formatting. Configure both to avoid rule conflicts.
+
+```json
+// .eslintrc.json
+{
+  "extends": ["eslint:recommended"],
+  "env": { "es2022": true, "node": true },
+  "parserOptions": { "ecmaVersion": "latest", "sourceType": "module" },
+  "rules": {
+    "eqeqeq": ["error", "always"],
+    "no-var": "error",
+    "prefer-const": "error"
+  }
+}
+```
+
+```json
+// .prettierrc
+{
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "printWidth": 100
+}
+```
+
+Run before committing:
+
+```bash
+npx eslint . --fix
+npx prettier --write .
 ```

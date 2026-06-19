@@ -416,9 +416,8 @@ console.log(message); // Output: Hello, Alice! Welcome to our application.
 
 **Explanation**: This function takes a name parameter and returns a personalized greeting message.
 
-````
-
 #### Version Information
+
 Include version information for API documentation.
 
 ```markdown
@@ -433,9 +432,10 @@ Include version information for API documentation.
 Retrieve a list of users.
 
 **Parameters:**
+
 - `limit` (optional): Number of users to return (default: 10, max: 100)
 - `offset` (optional): Number of users to skip (default: 0)
-````
+```
 
 ### Tools and Automation
 
@@ -488,7 +488,6 @@ npm run build
 
 Include diagrams using Mermaid syntax.
 
-````markdown
 ```mermaid
 graph TD
     A[Start] --> B{Is it working?}
@@ -497,11 +496,9 @@ graph TD
     D --> B
     C --> E[End]
 ```
-````
-
-````
 
 #### Mathematical Expressions
+
 Use LaTeX syntax for mathematical expressions.
 
 ```markdown
@@ -511,7 +508,6 @@ Block math:
 $$
 \int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
 $$
-````
 
 #### Custom HTML
 

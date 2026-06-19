@@ -67,10 +67,10 @@ Do not prefer spaces around HTML equals.
 Without spaces, it's easier to read, and you can better group an entity.
 
 ```html
-// Wrong
-<a href="/signin">Sign In</a>
+<!-- Wrong -->
+<a href = "/signin" >Sign In</a>
 
-// Right
+<!-- Right -->
 <a href="/signin">Sign In</a>
 ```
 
@@ -95,8 +95,11 @@ Do not use entity references.
 In HTML, entity references are unnecessary except for characters with special meanings (e.g., `<` and `&`) and control characters or "invisible" characters (e.g., indistinguishable spaces).
 
 ```html
-// Wrong The symbol for classification is &ldquo;&sect;&rdquo;. // Right The
-symbol for classification is "§".
+<!-- Wrong -->
+<p>The symbol for classification is &ldquo;&sect;&rdquo;.</p>
+
+<!-- Right -->
+<p>The symbol for classification is "§".</p>
 ```
 
 #### `type` Attributes
@@ -133,10 +136,10 @@ Don’t use tabs or mix tabs and spaces for indentation.
 Use only lowercase.
 
 ```html
-// Wrong
-<a href="/">Home</a>
+<!-- Wrong -->
+<A HREF="/">Home</A>
 
-// Right
+<!-- Right -->
 <a href="/">Home</a>
 ```
 
@@ -169,10 +172,10 @@ Use a new line for every block, list, or table element, and indent every such ch
 we recommend quoting attribute values.
 
 ```html
-// Wrong
-<a class="sign-in-button">Sign In</a>
+<!-- Wrong -->
+<a class=sign-in-button>Sign In</a>
 
-// Right
+<!-- Right -->
 <a class="sign-in-button">Sign In</a>
 ```
 

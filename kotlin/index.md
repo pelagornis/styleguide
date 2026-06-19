@@ -15,6 +15,7 @@ icon: /assets/images/icons/kotlin.svg
 - [Kotlin Multiplatform](#kotlin-multiplatform)
 - [Testing](#testing)
 - [Performance](#performance)
+- [Documentation](#documentation)
 
 ### Naming
 
@@ -648,3 +649,65 @@ class Cache<T> {
     }
 }
 ```
+
+### Documentation
+
+#### KDoc Comments
+
+Document public APIs with KDoc. Use `/** */` block comments for classes, functions, and properties.
+
+```kotlin
+/**
+ * Repository for managing user data.
+ *
+ * @param apiService The API client used for network requests.
+ */
+class UserRepository(private val apiService: ApiService) {
+
+    /**
+     * Fetches a user by their unique identifier.
+     *
+     * @param id The user's ID.
+     * @return The [User] if found, or `null` if not found.
+     * @throws NetworkException When the network request fails.
+     */
+    suspend fun getUser(id: Int): User? {
+        return apiService.fetchUser(id)
+    }
+}
+```
+
+#### Package Documentation
+
+Add a `package-info.kt` or top-level `package.md` file for package-level documentation in larger projects.
+
+```kotlin
+/**
+ * User management module.
+ *
+ * Provides data models, repositories, and services for user-related operations.
+ */
+package com.pelagornis.users
+```
+
+#### README Structure
+
+Each Kotlin module should include a README with:
+
+- Purpose and scope of the module
+- Setup and build instructions
+- Key dependencies
+- Example usage snippet
+
+````markdown
+# User Module
+
+User management for Pelagornis applications.
+
+## Usage
+
+```kotlin
+val repository = UserRepository(apiService)
+val user = repository.getUser(1)
+```
+````

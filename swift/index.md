@@ -16,6 +16,7 @@ icon: /assets/images/icons/swift.svg
 - [Performance](#performance)
 - [Accessibility](#accessibility)
 - [Patterns](#patterns)
+- [Testing](#testing)
 
 ### Naming
 
@@ -1524,4 +1525,91 @@ response(.success(Void()))
 
 /// Right
 response(.success(()))
+```
+
+### Testing
+
+#### Unit Testing with XCTest
+
+Write unit tests for business logic using XCTest.
+
+```swift
+import XCTest
+@testable import MyApp
+
+final class UserServiceTests: XCTestCase {
+    private var sut: UserService!
+    private var mockRepository: MockUserRepository!
+
+    override func setUp() {
+        super.setUp()
+        mockRepository = MockUserRepository()
+        sut = UserService(repository: mockRepository)
+    }
+
+    override func tearDown() {
+        sut = nil
+        mockRepository = nil
+        super.tearDown()
+    }
+
+    func testFetchUserReturnsUserWhenIdIsValid() async throws {
+        // Given
+        let expectedUser = User(id: 1, name: "John")
+        mockRepository.userToReturn = expectedUser
+
+        // When
+        let result = try await sut.fetchUser(id: 1)
+
+        // Then
+        XCTAssertEqual(result.id, expectedUser.id)
+        XCTAssertEqual(result.name, expectedUser.name)
+    }
+
+    func testFetchUserThrowsWhenUserNotFound() async {
+        // Given
+        mockRepository.userToReturn = nil
+
+        // When & Then
+        do {
+            _ = try await sut.fetchUser(id: 999)
+            XCTFail("Expected error to be thrown")
+        } catch {
+            XCTAssertTrue(error is UserServiceError)
+        }
+    }
+}
+```
+
+#### SwiftUI Preview Testing
+
+Use SwiftUI Previews for rapid UI iteration and visual regression checks.
+
+```swift
+#Preview("Default State") {
+    UserProfileView(user: User(id: 1, name: "John"))
+}
+
+#Preview("Loading State") {
+    UserProfileView(user: nil)
+        .redacted(reason: .placeholder)
+}
+
+#Preview("Dark Mode") {
+    UserProfileView(user: User(id: 1, name: "John"))
+        .preferredColorScheme(.dark)
+}
+```
+
+#### Test Naming
+
+Name tests to describe the scenario and expected outcome.
+
+```swift
+/// Wrong
+func testUser() { }
+
+/// Right
+func testFetchUserReturnsUserWhenIdIsValid() async throws { }
+func testFetchUserThrowsNotFoundErrorWhenIdDoesNotExist() async { }
 ```

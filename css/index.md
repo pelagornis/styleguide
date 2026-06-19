@@ -183,10 +183,10 @@ Don’t use tabs or mix tabs and spaces for indentation.
 Use only lowercase.
 
 ```css
-// Wrong
-color: #f5f5f7;
+/* Wrong */
+color: #F5F5F7;
 
-// Right
+/* Right */
 color: #f5f5f7;
 ```
 
@@ -296,18 +296,16 @@ Use single (`''`) rather than double (`""`) quotation marks for attribute select
 Do not use quotation marks in URI values (`url()`).
 
 ```css
-// Wrong
-@import url("https://pelagornis.com/...");
-
+/* Wrong */
 html {
-  font-family: "open sans", arial, sans-serif;
+  font-family: "Open Sans", arial, sans-serif;
 }
 
-// Right
+/* Right */
 @import url(https://pelagornis.com/...);
 
 html {
-  font-family: "open sans", arial, sans-serif;
+  font-family: 'open sans', arial, sans-serif;
 }
 ```
 

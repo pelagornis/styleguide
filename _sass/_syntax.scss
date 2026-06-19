@@ -1,7 +1,8 @@
 .highlight  { 
-    font-size: 1em;
-    background: #F6F7F8; 
-    color: #242424;
+    font-size: var(--text-sm);
+    line-height: var(--leading-snug);
+    background: var(--color-code-bg); 
+    color: var(--color-text);
     
     .c,   /* Comment */
     .cm,  /* Comment.Multiline */

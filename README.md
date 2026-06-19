@@ -14,6 +14,7 @@ StyleGuide uses [Jekyll](https://jekyllrb.com), static site generator in Ruby.
 
 - [CSS Style Guide](https://pelagornis.github.io/styleguide/css)
 - [Dart Style Guide](https://pelagornis.github.io/styleguide/dart)
+- [Git Style Guide](https://pelagornis.github.io/styleguide/git)
 - [HTML Style Guide](https://pelagornis.github.io/styleguide/html/)
 - [JavaScript Style Guide](https://pelagornis.github.io/styleguide/javascript/)
 - [JSON Style Guide](https://pelagornis.github.io/styleguide/json/)

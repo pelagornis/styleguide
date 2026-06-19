@@ -149,7 +149,7 @@ if request_success:
     print("SUCCESS:" + status_code)
 ```
 
-### 3. Python Formatting Rules
+### Python Formatting Rules
 
 #### Comments
 
@@ -235,6 +235,26 @@ import sys
 import requests
 
 from mymodule import my_function
+```
+
+#### Tooling
+
+Use automated tools to enforce style consistently across the project.
+
+| Tool   | Purpose                          |
+| ------ | -------------------------------- |
+| Black  | Code formatting                  |
+| Ruff   | Linting and import sorting       |
+| mypy   | Static type checking             |
+| pytest | Unit testing                     |
+
+Run formatting and linting before committing:
+
+```bash
+black .
+ruff check --fix .
+mypy src/
+pytest
 ```
 
 ### Patterns

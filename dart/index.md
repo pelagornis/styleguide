@@ -14,6 +14,7 @@ icon: /assets/images/icons/dart.svg
 - [Flutter Guidelines](#flutter-guidelines)
 - [Testing](#testing)
 - [Performance](#performance)
+- [Linting and Analysis](#linting-and-analysis)
 
 ### Naming
 
@@ -903,3 +904,42 @@ class AppColors {
   static const Color error = Color(0xFFB00020);
 }
 ```
+
+### Linting and Analysis
+
+#### analysis_options.yaml
+
+Configure the Dart analyzer and linter for every Flutter/Dart project.
+
+```yaml
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  language:
+    strict-casts: true
+    strict-inference: true
+    strict-raw-types: true
+
+linter:
+  rules:
+    - always_declare_return_types
+    - avoid_print
+    - prefer_const_constructors
+    - prefer_final_fields
+    - require_trailing_commas
+    - use_key_in_widget_constructors
+```
+
+#### dart format
+
+Always run `dart format` before committing. The formatter uses 2-space indentation and 80-character line length by default.
+
+```bash
+dart format .
+dart analyze
+flutter test
+```
+
+#### Effective Dart
+
+Follow the [Effective Dart](https://dart.dev/effective-dart) guidelines for API design, documentation, and usage patterns in addition to this style guide.

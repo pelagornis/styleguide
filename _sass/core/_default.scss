@@ -2,81 +2,76 @@ html {
     font-size: 100%;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
     margin: 0;
-    padding: 0;   
+    padding: 0;
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: var(--leading-normal);
+    letter-spacing: -0.011em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text);
+    font-weight: 600;
+    letter-spacing: -0.022em;
+    line-height: var(--leading-tight);
 }
 
 h1 {
     display: block;
     margin: 0.65em 0;
     font-size: 2em;
-    font-weight: bold;
 }
 
 h2 {
     display: block;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-size: 1.75em;
-    font-weight: bold;
+    margin: 2em 0 0.75em;
+    font-size: 1.375em;
 }
 
 h3 {
     display: block;
-    margin-block-start: 1.45em;
-    margin-block-end: 1.45em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-size: 1.5em;
-    font-weight: bold;
+    margin: 1.75em 0 0.5em;
+    font-size: 1.125em;
 }
 
 h4 {
     display: block;
-    margin-block-start: 1.33em;
-    margin-block-end: 1.33em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-size: 1.25em;
-    font-weight: bold;
+    margin: 1.5em 0 0.4em;
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--color-text-secondary);
 }
 
 h5 {
     display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-size: 1em;
-    font-weight: bold;
+    margin: 1.25em 0 0.35em;
+    font-size: 0.9375em;
 }
 
 h6 {
     display: block;
-    margin-block-start: 0.75em;
-    margin-block-end: 0.75em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
+    margin: 1em 0 0.3em;
+    font-size: 0.875em;
+    color: var(--color-text-muted);
 }
 
 strong {
-    font-weight: bold;
+    font-weight: 600;
 }
 
 p {
     display: block;
-    margin-block-start: 0.5em;
-    margin-block-end: 0.5em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-size: 1em;
-    font-weight: normal;
+    margin: 0 0 1em;
+    font-size: inherit;
+    font-weight: 400;
+    line-height: var(--leading-normal);
 }
 
 ul, ol, li, dl, dt, dd, hgroup, blockquote, figure,
@@ -90,29 +85,47 @@ main li {
 }
 
 pre {
-    padding: 16px;
-    overflow: scroll;
+    padding: 1rem 1.125rem;
+    overflow: auto;
+    line-height: var(--leading-snug);
 }
 
 pre, code, address, caption, th, figcaption {
-    font-size: 1em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    font-size: 13px;
-    font-weight: normal;
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    font-weight: 400;
     font-style: normal;
 }
 
 code {
-    padding: .2em .4em;
-    background-color: #f6f7f8;
-    border-radius: 6px;
+    padding: 0.15em 0.4em;
+    background-color: var(--color-code-bg);
+    border-radius: 5px;
+    font-size: 0.875em;
+    word-break: break-word;
 }
 
 pre code {
     padding: 0;
     border-radius: 0;
-    font-size: 100%;
+    font-size: inherit;
+    background: none;
+    word-break: normal;
+}
+
+blockquote {
+    margin: 1.25em 0;
+    padding: 0.75em 1em;
+    border-left: 3px solid var(--color-border);
+    color: var(--color-text-secondary);
+    font-size: var(--text-sm);
+    line-height: var(--leading-snug);
+}
+
+hr {
+    margin: 2em 0;
+    border: none;
+    border-top: 1px solid var(--color-border);
 }
 
 fieldset, iframe, img {
@@ -127,6 +140,18 @@ caption, th {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+    font-size: var(--text-sm);
+    line-height: var(--leading-snug);
+}
+
+th, td {
+    padding: 0.5em 0.75em;
+    border-bottom: 1px solid var(--color-border);
+}
+
+th {
+    font-weight: 600;
+    color: var(--color-text-secondary);
 }
 
 article, aside, footer, header, nav, main, section, summary, details,

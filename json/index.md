@@ -111,6 +111,20 @@ Do not add a comma after the last item in an object or array. JSON does not allo
 }
 ```
 
+#### Date and Time Values
+
+Use ISO 8601 format for all date and time values.
+
+```json
+{
+  "createdAt": "2024-01-15T10:30:00Z",
+  "updatedAt": "2024-06-19T14:22:00+09:00",
+  "birthDate": "1990-05-20"
+}
+```
+
+Always include the timezone (`Z` for UTC or an offset like `+09:00`). Do not use ambiguous formats like `01/15/2024`.
+
 #### Data Types
 
 Use appropriate data types for different kinds of data.

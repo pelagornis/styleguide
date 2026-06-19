@@ -4,6 +4,9 @@
 - header: Dart Style Guide
   url: /dart/
   icon: /assets/images/icons/dart.svg
+- header: Git Style Guide
+  url: /git/
+  icon: /assets/images/icons/git.svg
 - header: HTML Style Guide
   url: /html/
   icon: /assets/images/icons/html.svg

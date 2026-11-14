@@ -1,0 +1,12 @@
+---
+description: Core development instructions for the Pelagornis Styleguide repository.
+alwaysApply: true
+---
+
+# Pelagornis Styleguide
+
+- Preserve the existing project architecture and conventions.
+- Keep shared Skills in `.agents/skills/`.
+- Do not create duplicate editable Skills in `.cursor/skills/`.
+- Use relevant Skills for reusable workflows.
+- Run relevant validation before reporting completion.

@@ -25,6 +25,61 @@ StyleGuide uses [Jekyll](https://jekyllrb.com), static site generator in Ruby.
 - [Swift Style Guide](https://pelagornis.github.io/styleguide/swift/)
 - [TypeScript Style Guide](https://pelagornis.github.io/styleguide/typescript/)
 
+## Agent Skills
+
+Pelagornis provides reusable [Agent Skills](https://agentskills.io/specification) for consistent engineering workflows. The canonical library lives in [`.agents/skills/`](.agents/skills/) and supports Cursor, OpenAI Codex, and Claude Code.
+
+### Quick Start
+
+The [Skills CLI](https://github.com/vercel-labs/skills) requires Node.js 22.20 or later. Install all Skills for the current project:
+
+```bash
+npx skills add pelagornis/styleguide --skill '*' \
+  --agent cursor \
+  --agent codex \
+  --agent claude-code
+```
+
+For all projects on the current machine, add `--global`:
+
+```bash
+npx skills add pelagornis/styleguide --skill '*' \
+  --agent cursor \
+  --agent codex \
+  --agent claude-code \
+  --global
+```
+
+When prompted, choose the CLI's recommended symlink mode. It creates native agent links without independently maintained copies. Install just one workflow by replacing `'*'`, for example `--skill pelagornis-code-review`.
+
+### Available Skills
+
+| Skill | Description |
+|---|---|
+| `pelagornis-code-review` | Review code changes and identify actionable issues. |
+| `pelagornis-repository-audit` | Audit repository architecture, quality, and security. |
+| `pelagornis-git-workflow` | Perform safe and consistent Git workflows. |
+| `pelagornis-test-debug` | Investigate failures and verify fixes. |
+| `pelagornis-docs-maintenance` | Maintain implementation-aligned documentation. |
+| `pelagornis-skill-authoring` | Create and validate Agent Skills. |
+
+### Use Skills Immediately
+
+Cursor users can open Agent chat, type `/`, and select `/pelagornis-code-review`. Codex users can inspect Skills with `/skills` and invoke `$pelagornis-code-review`. Claude Code users can run `/pelagornis-code-review`. Each agent can also select a relevant Skill from a matching natural-language request.
+
+### Manage and troubleshoot
+
+```bash
+npx skills list
+npx skills check
+npx skills update
+npx skills update pelagornis-code-review
+```
+
+If a Skill is missing, confirm that its directory contains `SKILL.md`, check the agent-native install location, use `npx skills list`, and restart the agent session. Project locations are `.agents/skills/` for Cursor and Codex and `.claude/skills/` for Claude Code; global locations are `~/.cursor/skills/`, `~/.agents/skills/`, and `~/.claude/skills/`, respectively.
+
+Read the [Agent Skills guide](https://pelagornis.github.io/styleguide/docs/agents/) for integration and maintenance details.
+
 ## Contributors
 
 - [View Contributors](https://github.com/pelagornis/styleguide/graphs/contributors)

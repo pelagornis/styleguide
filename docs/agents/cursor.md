@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Cursor integration
+hide_page_header: true
 permalink: /docs/agents/cursor/
 ---
 

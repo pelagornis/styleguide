@@ -6,12 +6,14 @@ layout: base
 
 <main role="main">
     <article class="page">
+        {% unless page.hide_page_header %}
         <header class="page-header">
             {% if page.icon %}
             <img src="{{ page.icon | relative_url }}" alt=""></img>
             {% endif %}
             <h1>{{ page.title }}</h1>
         </header>
+        {% endunless %}
         {{ content }}
     </article>
 </main>

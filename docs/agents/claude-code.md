@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Claude Code integration
+hide_page_header: true
 permalink: /docs/agents/claude-code/
 ---
 

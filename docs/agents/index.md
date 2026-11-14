@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Agent Skills
+hide_page_header: true
 ---
 
 # Agent Skills

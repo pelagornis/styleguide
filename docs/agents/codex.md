@@ -1,6 +1,7 @@
 ---
 layout: page
 title: OpenAI Codex integration
+hide_page_header: true
 permalink: /docs/agents/codex/
 ---
 

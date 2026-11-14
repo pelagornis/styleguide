@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Skill library
+hide_page_header: true
 permalink: /docs/agents/skills/
 ---
 

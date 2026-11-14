@@ -13,14 +13,14 @@ Use <code>references/</code> for detailed material, <code>scripts/</code> for de
 
 ## Available Skills
 
-| Skill | Use it for |
+| Skill | Use it for | Direct URL |
 |---|---|
-| <code>pelagornis-code-review</code> | Evidence-based review of a pull request, diff, or implementation. |
-| <code>pelagornis-repository-audit</code> | Prioritized architecture, quality, security, and maintenance audit. |
-| <code>pelagornis-git-workflow</code> | Safe commits, pull requests, conflict investigation, and cleanup. |
-| <code>pelagornis-test-debug</code> | Reproducing failures and validating the smallest reliable fix. |
-| <code>pelagornis-docs-maintenance</code> | Documentation, navigation, links, and example maintenance. |
-| <code>pelagornis-skill-authoring</code> | Creating or improving a portable reusable workflow. |
+| <code>pelagornis-code-review</code> | Evidence-based review of a pull request, diff, or implementation. | [SKILL.md](https://raw.githubusercontent.com/pelagornis/styleguide/main/.agents/skills/pelagornis-code-review/SKILL.md) |
+| <code>pelagornis-repository-audit</code> | Prioritized architecture, quality, security, and maintenance audit. | [SKILL.md](https://raw.githubusercontent.com/pelagornis/styleguide/main/.agents/skills/pelagornis-repository-audit/SKILL.md) |
+| <code>pelagornis-git-workflow</code> | Safe commits, pull requests, conflict investigation, and cleanup. | [SKILL.md](https://raw.githubusercontent.com/pelagornis/styleguide/main/.agents/skills/pelagornis-git-workflow/SKILL.md) |
+| <code>pelagornis-test-debug</code> | Reproducing failures and validating the smallest reliable fix. | [SKILL.md](https://raw.githubusercontent.com/pelagornis/styleguide/main/.agents/skills/pelagornis-test-debug/SKILL.md) |
+| <code>pelagornis-docs-maintenance</code> | Documentation, navigation, links, and example maintenance. | [SKILL.md](https://raw.githubusercontent.com/pelagornis/styleguide/main/.agents/skills/pelagornis-docs-maintenance/SKILL.md) |
+| <code>pelagornis-skill-authoring</code> | Creating or improving a portable reusable workflow. | [SKILL.md](https://raw.githubusercontent.com/pelagornis/styleguide/main/.agents/skills/pelagornis-skill-authoring/SKILL.md) |
 
 ## Validation and maintenance
 

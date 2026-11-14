@@ -31,6 +31,15 @@ Pelagornis provides reusable [Agent Skills](https://agentskills.io/specification
 
 ### Quick Start
 
+For a one-off, web-capable agent task, provide the direct URL for only the relevant canonical Skill. No repository download is required:
+
+~~~
+Read and follow https://raw.githubusercontent.com/pelagornis/styleguide/main/.agents/skills/pelagornis-code-review/SKILL.md
+before reviewing this change.
+~~~
+
+This is a session-only instruction. Install Skills when they should be natively discovered in future sessions.
+
 The [Skills CLI](https://github.com/vercel-labs/skills) requires Node.js 22.20 or later. Install all Skills for the current project:
 
 ```bash

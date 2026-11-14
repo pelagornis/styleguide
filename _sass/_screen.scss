@@ -393,7 +393,7 @@ main {
         padding-top: 0.5em;
     }
 
-    .home-github {
+    .home-agent-skills {
         display: inline-flex;
         align-items: center;
         gap: 0.5em;
@@ -406,11 +406,6 @@ main {
         border-radius: 999px;
         text-decoration: none;
         transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
-
-        svg {
-            flex-shrink: 0;
-            opacity: 0.7;
-        }
 
         &:hover {
             color: var(--color-text);

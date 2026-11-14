@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Skill library
+permalink: /docs/agents/skills/
 ---
 
 # Skill library

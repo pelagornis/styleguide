@@ -1,6 +1,7 @@
 ---
 layout: page
 title: OpenAI Codex integration
+permalink: /docs/agents/codex/
 ---
 
 # OpenAI Codex integration

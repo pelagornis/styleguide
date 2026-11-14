@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Cursor integration
+permalink: /docs/agents/cursor/
 ---
 
 # Cursor integration

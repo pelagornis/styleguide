@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Claude Code integration
+permalink: /docs/agents/claude-code/
 ---
 
 # Claude Code integration
